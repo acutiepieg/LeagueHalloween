@@ -4,8 +4,8 @@ Minim minim = new Minim(this);
 public class Lightning {
   float chaos = 0.25;
   ArrayList<PVector> points;
-  AudioPlayer thunder = null;
-  boolean lightningFlash = false;
+  AudioPlayer thunder;
+  boolean lightningFlash = true;
 
   void playThunder() {
     if( canPlaySound ){

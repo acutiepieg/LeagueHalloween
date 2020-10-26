@@ -4,8 +4,9 @@ public class Ghost {
   int x;
   int y;
   int speed = 5;
+  int tintNum;
 
-  public Ghost(int y, int speed, String direction) {
+  public Ghost(int y, int speed, String direction, int tintNum) {
     ghostImg = loadImage( "ghost.png" );
     ghostImg.resize(150, 250);
     
@@ -13,13 +14,14 @@ public class Ghost {
     this.speed = speed;
     this.x = -ghostImg.width;
     this.y = y;
+    this.tintNum = tintNum;
   }
 
   void draw() {
     push();
 
     // Makes ghost transparent
-    tint(255, 125);
+    tint(tintNum, 125);
     
     if( direction.equalsIgnoreCase("left") ){
       // Ghost goes right to left
